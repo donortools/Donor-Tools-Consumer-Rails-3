@@ -67,6 +67,17 @@ To get a list of donations, you'd open up ./script/console, and type:
 ### Finding a donor
 
     persona = Persona.find(12345)
+    
+### Searching for a Donor
+
+To search across all fields, use the `search` param with the `find` method: 
+
+    Persona.find(:all, :params => {:search => "henley.tim@gmail.com"})
+
+... Or use the cleaner `where` syntax in Rails 4: 
+
+    Persona.where(:search => "henley.tim@gmail.com")
+
   
 ### Creating a donor
 
